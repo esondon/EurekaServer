@@ -1,0 +1,12 @@
+eureka:
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+server:
+  port: 8761
+
+zuul:
+  routes:
+    products:
+      path: /api/zuul/**
+      url: http://localhost:8080/
